@@ -1,14 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from "@angular/core";
+import { Appointment } from "../../app.component";
 
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html'
+  selector: "app-list",
+  templateUrl: "./list.component.html"
 })
-export class ListComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class ListComponent {
+  @Input() appointmentList!: Appointment[];
 }
